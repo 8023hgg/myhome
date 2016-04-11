@@ -62,10 +62,12 @@
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.16" />
           <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: quartz:quartz:1.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.2.4.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="D:\myself\target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/myhome-0.1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="myhome-0.1/web/Web" />
     </root>

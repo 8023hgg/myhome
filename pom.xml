@@ -207,6 +207,19 @@
     </dependency>
     <!--在页面中能使用C标签一类的 end-->
 
+    <!--定时器 start-->
+    <dependency>
+      <groupId>quartz</groupId>
+      <artifactId>quartz</artifactId>
+      <version>1.5.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>3.2.4.RELEASE</version>
+    </dependency>
+    <!--定时器 end-->
+
   </dependencies>
   <!-- jetty插件 -->
 
