@@ -1,5 +1,7 @@
 package home.service.base;
 
+import home.common.page.Pagination;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -33,5 +35,7 @@ public interface BaseServiceI<T> {
      * 清除一级缓存的数据
      */
     public void clear();
+
+    public Pagination paginationList(String hql, int pageNo, int pageSize, Object... values);
 
 }

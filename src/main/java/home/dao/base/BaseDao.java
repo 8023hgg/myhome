@@ -1,5 +1,6 @@
 package home.dao.base;
 
+import home.common.page.Pagination;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import java.io.Serializable;
@@ -35,5 +36,15 @@ public interface BaseDao<T>{
      * 清除一级缓存的数据
      */
     public void clear();
+
+    /**
+     * 分页获取数据
+     * @param hql
+     * @param pageNo
+     * @param pageSize
+     * @param values
+     * @return
+     */
+    public Pagination findPagination(String hql, int pageNo, int pageSize, Object... values);
 
 }

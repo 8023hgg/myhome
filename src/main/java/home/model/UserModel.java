@@ -1,10 +1,12 @@
 package home.model;
 
+import home.model.page.PageModel;
+
 /**
  * 用户模版（页面展示和远程数据传送）
  * Created by qijie on 2016/3/30.
  */
-public class UserModel {
+public class UserModel extends PageModel{
 
     /**
      * 用户Id，不是User表的主键ID

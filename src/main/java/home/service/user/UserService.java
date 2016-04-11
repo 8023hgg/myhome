@@ -1,5 +1,6 @@
 package home.service.user;
 
+import home.common.page.Pagination;
 import home.entity.User;
 import home.exception.ShowMessageException;
 import home.model.UserModel;
@@ -95,6 +96,12 @@ public class UserService extends BaseServiceImpl<User>{
             return doToModel(user);
         }
         return null;
+    }
+
+    public Pagination list(UserModel userModel){
+
+        String hql = "from User u";
+        return this.paginationList(hql,userModel.getPageNo(),userModel.getPageSize());
     }
 
     public User modelToDo(UserModel userModel){

@@ -1,6 +1,8 @@
 package home.controller;
 
 import com.alibaba.fastjson.JSON;
+import home.common.page.Pagination;
+import home.entity.User;
 import home.exception.ShowMessageException;
 import home.manager.ThreadTestManager;
 import home.model.UserModel;
@@ -17,6 +19,7 @@ import redis.clients.jedis.ShardedJedis;
 import redis.clients.jedis.ShardedJedisPool;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by qijie on 2016/3/29.
@@ -126,6 +129,23 @@ public class UserController {
         return JSON.toJSONString("T");
     }
 
+    /**
+     * 用户列表
+     * @return
+     */
+    @RequestMapping("/list")
+    public String list(UserModel userModel,Model model){
+
+        UserModel userModels = new UserModel();
+        userModels.setPageNo(1);
+        userModels.setPageSize(20);
+        Pagination pagination = userService.list(userModels);
+        List<User> users = (List<User>)pagination.getList();
+
+        model.addAttribute("pagination",pagination);
+        model.addAttribute("users",users);
+        return "user/list";
+    }
     /**
      * 异常处理页面
      * @param model
