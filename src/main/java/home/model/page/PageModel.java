@@ -7,9 +7,9 @@ public class PageModel {
     /**
      * 第几页
      */
-    private Integer pageNo;
+    private Integer pageNo = 1;
     //每页大小
-    private Integer pageSize;
+    private Integer pageSize = 20;
     //总数量
     private Integer totalSize;
 

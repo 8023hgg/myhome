@@ -144,6 +144,7 @@ public class UserController {
 
         model.addAttribute("pagination",pagination);
         model.addAttribute("users",users);
+        model.addAttribute("userModel",userModel);
         return "user/list";
     }
     /**
